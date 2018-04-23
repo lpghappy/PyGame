@@ -20,7 +20,7 @@ background = pygame.image.load("material/image/background.png")  # 加载背景�
 # 获取我方飞机
 our_plane = OurPlane(bg_size)
 
-def add_small_enemies(group1, group2, num):  
+def add_small_enemies(group1, group2, num):
     """
     添加小型敌机
     指定个敌机对象添加到精灵组（sprite.group）
