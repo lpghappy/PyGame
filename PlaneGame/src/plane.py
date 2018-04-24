@@ -10,6 +10,10 @@
     我方飞机和敌方飞机指定掩膜属性以及生存状态标志位 添加 self.mask 属性(可以实现更精准的碰撞效果)
 """
 
+from config.settings import BASE_DIR
+
+import os
+
 # 倒入精灵模块, 使飞机可以动起来
 import pygame
 
@@ -18,8 +22,8 @@ class OurPlane(pygame.sprite.Sprite):
     def __init__(self, bg_size):
         super(OurPlane, self).__init__()
         # 确定我方飞机背景图(有俩张，可以让它们不停的切换，形成动态效果)
-        self.image_one = pygame.image.load("material/image/hero1.png")
-        self.image_two = pygame.image.load("material/image/hero2.png")
+        self.image_one = pygame.image.load(os.path.join(BASE_DIR, "material/image/hero1.png"))
+        self.image_two = pygame.image.load(os.path.join(BASE_DIR, "material/image/hero2.png"))
         # 获取我方飞机的位置
         self.rect = self.image_one.get_rect()
         # 本地化背景图片的尺寸
@@ -29,17 +33,17 @@ class OurPlane(pygame.sprite.Sprite):
         # 定义飞机初始化位置，底部预留60像素
         self.rect.left, self.rect.top = (self.width - self.rect.width) // 2, (self.height - self.rect.height - 60)
         #设置飞机移动速度
-        self.speed = 10
+        self.speed = 5
         # 设置飞机存活状态(True为存活，False为死亡)
         self.active = True
         # 加载飞机损毁图片
         self.destroy_images = []
         self.destroy_images.extend(
             [
-                pygame.image.load("material/image/hero_blowup_n1.png"),
-                pygame.image.load("material/image/hero_blowup_n2.png"),
-                pygame.image.load("material/image/hero_blowup_n3.png"),
-                pygame.image.load("material/image/hero_blowup_n4.png")
+                pygame.image.load(os.path.join(BASE_DIR, "material/image/hero_blowup_n1.png")),
+                pygame.image.load(os.path.join(BASE_DIR, "material/image/hero_blowup_n2.png")),
+                pygame.image.load(os.path.join(BASE_DIR, "material/image/hero_blowup_n3.png")),
+                pygame.image.load(os.path.join(BASE_DIR, "material/image/hero_blowup_n4.png")),
             ]
         )
 
