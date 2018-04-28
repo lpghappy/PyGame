@@ -11,7 +11,7 @@ from src.plane import OurPlane
 from src.enemy import SmallEnemy
 from src.bullet import Bullet
 
-bg_size = 480, 852  # 初始化游戏背景大小（宽，高）
+bg_size = 480, 732  # 初始化游戏背景大小（宽，高）
 screen = pygame.display.set_mode(bg_size)  # 设置背景对话框
 pygame.display.set_caption("飞机大战")  # 设置标题
 

@@ -13,7 +13,7 @@ if __name__ == '__main__':
     main()
 
 """
-PlayPlane/
+PlaneGame/
 |-- bin/
 |   |-- main.py         程序运行主体程序
 |-- config/
