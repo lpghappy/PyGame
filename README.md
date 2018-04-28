@@ -9,7 +9,7 @@ PyGame
 
 #### 安装教程
 
-1. xxxx
+1. 12345
 2. xxxx
 3. xxxx
 
